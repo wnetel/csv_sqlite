@@ -1,5 +1,6 @@
 package com.example.nwitold.csv_sqlite;
 
+import android.content.res.AssetFileDescriptor;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.opencsv.CSVReader;
+
+import java.io.FileReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    CSVReader reader = new CSVReader(new FileReader("/src/main/assets/test.csv"));
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
