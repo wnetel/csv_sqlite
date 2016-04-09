@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import com.opencsv.CSVReader;
 
+import java.io.File;
 import java.io.FileReader;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,11 +32,12 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
     }
 
-    CSVReader reader = new CSVReader(new FileReader("/src/main/assets/test.csv"));
-
+    CSVReader reader = new CSVReader(new FileReader(File"test.csv"));
     @Override
+
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
